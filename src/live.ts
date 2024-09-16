@@ -1,6 +1,6 @@
 import { ChatItem } from "./types/youtube";
 
-const KEY = "AIzaSyBMfxI8XacMUNkkLBqg_BVUKNXHuezvKfg" as const;
+const KEY = import.meta.env.VITE_GOOGLE_API_KEY;
 
 export const getChatId = async (
   youtubeUrl: string
