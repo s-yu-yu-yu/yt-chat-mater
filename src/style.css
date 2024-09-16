@@ -1,0 +1,49 @@
+.mater-container {
+  margin: 50px 0 0 100px;
+}
+
+.mater-container .mater {
+  display: inline-block;
+  width: 150px;
+  height: 500px;
+}
+
+.mater-container .mater .mater__inner {
+  background-color: white;
+  border: 1px solid #333;
+  border-radius: 16px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.mater-container .mater .mater__inner__gauge {
+  width: 100%;
+  height: 0%;
+  border-radius: 0;
+  transition: height 0.5s;
+  position: absolute;
+  bottom: 0;
+}
+
+/* 0~19%の色 */
+.mater-container .mater .mater__inner__gauge.--color-1 {
+  background: linear-gradient(to bottom, #5500ff 0%, #4210e6 100%);
+}
+/* 20~49%の色 */
+.mater-container .mater .mater__inner__gauge.--color-2 {
+  background: linear-gradient(to bottom, #bcff21 0%, #0ede4c 100%);
+}
+/* 50~79%の色 */
+.mater-container .mater .mater__inner__gauge.--color-3 {
+  background: linear-gradient(to bottom, #ff9f21 0%, #deb40e 100%);
+}
+/* 80~99%の色 */
+.mater-container .mater .mater__inner__gauge.--color-4 {
+  background: linear-gradient(to bottom, #ff2c21 0%, #de500e 100%);
+}
+
+.mater-container .mater__text {
+  display: flex;
+  justify-content: center;
+}
