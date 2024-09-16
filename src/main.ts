@@ -1,9 +1,16 @@
-function component() {
-  const element = document.createElement("div");
+const inputElm = document.getElementById("input") as HTMLInputElement;
+const buttonElm = document.getElementById("button") as HTMLButtonElement;
+const buttonElm2 = document.getElementById("button2") as HTMLButtonElement;
 
-  element.innerHTML = "Hello, World!";
+const init = () => {
+  buttonElm.addEventListener("click", () => {
+    listenLiveChat(inputElm.value);
+  });
+};
 
-  return element;
-}
+const listenLiveChat = (id: string) => {
+  if (!id) return;
+  console.log("channelId", id);
+};
 
-document.body.appendChild(component());
+init();
